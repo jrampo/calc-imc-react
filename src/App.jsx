@@ -1,16 +1,13 @@
+import React from "react";
+
+import IMCCalculator from "./components";
+
+import "./style/App.css";
+
 function App() {
   return (
-    <div>
-      <form action="">
-        <div>
-          <h3>Altura:</h3>
-          <input type="number" />
-        </div>
-        <div>
-          <h3>Peso:</h3>
-          <input type="number" />
-        </div>
-      </form>
+    <div className="App">
+      <IMCCalculator />
     </div>
   );
 }
