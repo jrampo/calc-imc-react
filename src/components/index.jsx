@@ -44,7 +44,7 @@ const IMCCalculator = () => {
             />
           </label>
         </div>
-        <button type="submit">Calcular IMC</button>
+        <button type="submit">Calculo IMC</button>
       </form>
       {imc && (
         <div>
