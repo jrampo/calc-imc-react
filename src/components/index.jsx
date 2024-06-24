@@ -23,33 +23,35 @@ const IMCCalculator = () => {
       <h1>Calculadora de IMC</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>
-            Peso:
-            <input
-              onChange={(e) => setPeso(e.target.value)}
-              value={peso}
-              type="number"
-              required
-            />
-          </label>
+          <div>
+            <label>
+              Peso:
+              <input
+                onChange={(e) => setPeso(e.target.value)}
+                value={peso}
+                type="number"
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Altura em centimetros:
+              <input
+                onChange={(e) => setAltura(e.target.value)}
+                value={altura}
+                type="number"
+                required
+              />
+            </label>
+          </div>
         </div>
-        <div>
-          <label>
-            Altura em centimetros:
-            <input
-              onChange={(e) => setAltura(e.target.value)}
-              value={altura}
-              type="number"
-              required
-            />
-          </label>
-        </div>
-        <button type="submit">Calculo IMC</button>
+        <button type="submit">+</button>
       </form>
       {imc && (
         <div>
           <h2>Seu IMC: {imc}</h2>
-          <p>
+          <p className="imc">
             {imc < 18.5
               ? "Abaixo do peso"
               : imc < 24.9
@@ -62,7 +64,7 @@ const IMCCalculator = () => {
               ? "Obesidade grau II"
               : "Obesidade grau III"}
           </p>
-          <img src={IMC} alt="Tabela IMC" />
+          <img className="imc-img" src={IMC} alt="Tabela IMC" />
         </div>
       )}
     </div>
