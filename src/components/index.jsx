@@ -22,31 +22,33 @@ const IMCCalculator = () => {
     <div>
       <h1>Calculadora de IMC</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="teste">
           <div>
-            <label>
-              Peso:
-              <input
-                onChange={(e) => setPeso(e.target.value)}
-                value={peso}
-                type="number"
-                required
-              />
-            </label>
+            <div>
+              <label>
+                Peso:
+                <input
+                  onChange={(e) => setPeso(e.target.value)}
+                  value={peso}
+                  type="number"
+                  required
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Altura em centimetros:
+                <input
+                  onChange={(e) => setAltura(e.target.value)}
+                  value={altura}
+                  type="number"
+                  required
+                />
+              </label>
+            </div>
           </div>
-          <div>
-            <label>
-              Altura em centimetros:
-              <input
-                onChange={(e) => setAltura(e.target.value)}
-                value={altura}
-                type="number"
-                required
-              />
-            </label>
-          </div>
+          <button type="submit">+</button>
         </div>
-        <button type="submit">+</button>
       </form>
       {imc && (
         <div>
